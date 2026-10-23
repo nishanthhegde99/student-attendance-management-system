@@ -80,26 +80,46 @@ npm install
 npm run seed     # Populates sample teachers, classes & students
 npm run dev      # Starts API server on http://localhost:5001
 
-# Terminal 2: Mobile
+# Terminal 2: Mobile (Native iOS / Android / Web)
 cd mobile
 npm install
-npm run ios      # Runs iOS Simulator
-# OR: npm run web (to test directly in Chrome/Safari)
+
+# Option A: Run native iOS (Xcode / CocoaPods)
+npm run ios
+
+# Option B: Run native Android
+npm run android
+
+# Option C: Run Web in browser
+npm run web
 ```
 
 ### Developer 2 (Windows):
 ```cmd
-# Terminal 1: Backend
+:: Terminal 1: Backend
 cd server
 npm install
-npm run seed     # Populates test teachers, classes & students
-npm run dev      # Starts API server on http://localhost:5001
+npm run seed     :: Populates test teachers, classes & students
+npm run dev      :: Starts API server on http://localhost:5001
 
-# Terminal 2: Mobile
+:: Terminal 2: Mobile (Native Android / Web)
 cd mobile
 npm install
-npm run android  # Runs Android Emulator (automatically uses 10.0.2.2)
-# OR: npm run web
+
+:: Option A: Run directly on Android Emulator / Physical USB Device
+npm run android
+
+:: Option B: Open in Android Studio directly
+:: Open Android Studio -> Select "Open Existing Project" -> Choose the `mobile/android` folder!
+
+:: Option C: Build standalone debug APK without emulators
+cd android
+gradlew.bat assembleDebug
+:: Output APK is located at: mobile/android/app/build/outputs/apk/debug/app-debug.apk
+:: Transfer this APK directly to any Android phone via WhatsApp/USB and install!
+
+:: Option D: Run Web in Chrome/Edge
+npm run web
 ```
 
 ---

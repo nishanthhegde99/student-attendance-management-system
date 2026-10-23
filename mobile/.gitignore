@@ -38,6 +38,9 @@ yarn-error.*
 
 example
 
-# generated native folders
-/ios
-/android
+# generated native build outputs
+/android/app/build/
+/android/.gradle/
+/ios/Pods/
+/ios/build/
+
