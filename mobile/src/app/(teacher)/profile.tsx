@@ -103,7 +103,7 @@ export default function TeacherProfileScreen() {
         />
 
         <Text style={styles.footerNote}>
-          Student Attendance Management System • MCA Major Project
+          Student Attendance Management System • MCA Department
         </Text>
       </ScrollView>
     </SafeAreaView>

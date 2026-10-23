@@ -46,14 +46,6 @@ export default function WelcomeScreen() {
           </View>
           <Text style={styles.heroTitle}>MCA Department</Text>
           <Text style={styles.heroSubtitle}>Attendance Management System</Text>
-          <View style={styles.badgeRow}>
-            <View style={styles.projectPill}>
-              <Text style={styles.projectPillText}>MCA Major Project</Text>
-            </View>
-            <View style={styles.projectPill}>
-              <Text style={styles.projectPillText}>Two-Member Team</Text>
-            </View>
-          </View>
         </View>
 
         {/* Features Highlight */}
@@ -144,8 +136,8 @@ const styles = StyleSheet.create({
   },
   heroBanner: {
     backgroundColor: Colors.navyPrimary,
-    paddingTop: 40,
-    paddingBottom: 36,
+    paddingTop: 36,
+    paddingBottom: 30,
     paddingHorizontal: 24,
     alignItems: 'center',
     borderBottomLeftRadius: 28,
@@ -172,24 +164,6 @@ const styles = StyleSheet.create({
     marginTop: 4,
     fontWeight: '500',
     textAlign: 'center',
-  },
-  badgeRow: {
-    flexDirection: 'row',
-    gap: 8,
-    marginTop: 14,
-  },
-  projectPill: {
-    backgroundColor: 'rgba(255, 255, 255, 0.12)',
-    paddingVertical: 4,
-    paddingHorizontal: 12,
-    borderRadius: 20,
-    borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.2)',
-  },
-  projectPillText: {
-    color: '#E0E7FF',
-    fontSize: 11,
-    fontWeight: '600',
   },
   featuresSection: {
     padding: 24,
