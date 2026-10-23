@@ -24,6 +24,8 @@ web-build/
 # Android / iOS build artifacts
 android/app/build/
 android/app/debug.keystore
+*.apk
+*.aab
 ios/Pods/
 ios/build/
 

@@ -12,12 +12,27 @@ app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+import path from 'path';
+
 // Health Check Endpoint
 app.get('/api/health', (_req: Request, res: Response) => {
   res.status(200).json({
     status: 'healthy',
     message: 'Student Attendance Management API is running',
     timestamp: new Date().toISOString()
+  });
+});
+
+// Direct APK Download Endpoint for Android Devices
+app.get('/api/download/apk', (_req: Request, res: Response) => {
+  const apkPath = path.resolve(__dirname, '../../attendance-app.apk');
+  res.download(apkPath, 'attendance-app.apk', (err) => {
+    if (err) {
+      console.error('[APK Download Error]', err);
+      if (!res.headersSent) {
+        res.status(404).json({ success: false, message: 'APK file not found on server' });
+      }
+    }
   });
 });
 
